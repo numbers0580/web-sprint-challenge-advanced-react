@@ -34,37 +34,37 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
   a class structured like this: class ClassName extends React.Component {}
 
 2. Describe the different phases of the component lifecycle.
-There are 3 phases of the Component Lifecycle: Mounting, Updating, and Unmounting.
-It was described in an analogy during a lecture as: Birth, Life, and Death respectively.
-The 'Mounting' phase would start with the constructor in the class and initialize state, go to render() function to display data to the page,
-and finally to componentDidMount() which only ever gets called once, to get any asynchronous data.
-The 'Updating' phase can cycle within itself numerous times, if needed. Most of the time, it goes to render() to display any changed data to the page,
-and then to componentDidUpdate() if used.
-The 'Unmounting' phase calls componentWillUnmount() to handle any event listeners and other elements that should be cleaned up to prevent memory leaks.
+  There are 3 phases of the Component Lifecycle: Mounting, Updating, and Unmounting.
+  It was described in an analogy during a lecture as: Birth, Life, and Death respectively.
+  The 'Mounting' phase would start with the constructor in the class and initialize state, go to render() function to display data to the page,
+  and finally to componentDidMount() which only ever gets called once, to get any asynchronous data.
+  The 'Updating' phase can cycle within itself numerous times, if needed. Most of the time, it goes to render() to display any changed data to the page,
+  and then to componentDidUpdate() if used.
+  The 'Unmounting' phase calls componentWillUnmount() to handle any event listeners and other elements that should be cleaned up to prevent memory leaks.
 
 3. Demonstrate an understanding of class component lifecycle methods.
-The constructor() method initializes data to be held in state.
-The render() method displays data on to the page.
-The componentDidMount() method is called (only once) to get any asynchronous data
-The componentDidUpdate() method can check for any specific updated data.
-The componentWillUnmount() method cleans up event listeners and other elements no longer needed in order to prevent memory leaks.
+  The constructor() method initializes data to be held in state.
+  The render() method displays data on to the page.
+  The componentDidMount() method is called (only once) to get any asynchronous data
+  The componentDidUpdate() method can check for any specific updated data.
+  The componentWillUnmount() method cleans up event listeners and other elements no longer needed in order to prevent memory leaks.
 
 4. Define stateful logic.
-"Stateful logic is any code that uses state..." Quoted from: https://html.developreference.com/article/10309768/What's+the+difference+between+stateful+logic+and+state+in+React%3F
-State is mutable data that we have when we need it and is as persistent in memory as your component.
-Effectively, I would say stateful logic is code that uses this mutable data held in memory to help render a page using the current value in that state.
+  "Stateful logic is any code that uses state..." Quoted from: https://html.developreference.com/article/10309768/What's+the+difference+between+stateful+logic+and+state+in+React%3F
+  State is mutable data that we have when we need it and is as persistent in memory as your component.
+  Effectively, I would say stateful logic is code that uses this mutable data held in memory to help render a page using the current value in that state.
 
 5. Describe how to test a React component with React Testing Library.
-Tests using the React Testing Library is setup using Arrange, Act, and Assert
-All tests are created like this:
-test("Some descriptive message about what's being tested", () => {
-  //Arrange
-  //Act
-  //Assert
-});
-In the Arrange part, we would use render() to create a virtual DOM of our project.
-In the Act part, we would create all the const, screen, and fireEvents to test the implementation of the elements the user sees on the page.
-In the Assert part, we would use expect() to show the element, or any specified changes to the element is being rendered properly.
+  Tests using the React Testing Library is setup using Arrange, Act, and Assert
+  All tests are created like this:
+  test("Some descriptive message about what's being tested", () => {
+    //Arrange
+    //Act
+    //Assert
+  });
+  In the Arrange part, we would use render() to create a virtual DOM of our project.
+  In the Act part, we would create all the const, screen, and fireEvents to test the implementation of the elements the user sees on the page.
+  In the Assert part, we would use expect() to show the element, or any specified changes to the element is being rendered properly.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
