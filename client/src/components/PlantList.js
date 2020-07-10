@@ -16,10 +16,11 @@ export default class PlantList extends Component {
   componentDidMount() {
     axios.get('http://localhost:3333/plants')
       .then(fetchedPlants => {
+        console.log('Checking for fetched plants data:', fetchedPlants.data);
         this.setState({plants: fetchedPlants.data.plantsData});
       })
       .catch(plantError => {
-        console.log('Error fetching data from plants');
+        console.log('Error fetching plants data from localhost API');
       })
   }
 
